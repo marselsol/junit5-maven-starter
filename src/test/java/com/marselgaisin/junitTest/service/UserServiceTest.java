@@ -12,6 +12,6 @@ class UserServiceTest {
     void usersEmptyIfNoUserAdded() {
         var userService = new UserService();
         var users = userService.getAll();
-        assertFalse(users.isEmpty(), () -> "users list should be empty");
+        assertTrue(users.isEmpty(), () -> "users list should be empty");
     }
 }

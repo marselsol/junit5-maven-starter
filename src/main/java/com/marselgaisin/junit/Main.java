@@ -1,4 +1,5 @@
-package com.marselgaisin.junit-maven-starter;public class Main {
+package com.marselgaisin.junit;
+public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }

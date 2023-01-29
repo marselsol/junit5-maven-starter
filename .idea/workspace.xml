@@ -7,7 +7,6 @@
     <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="6 lesson">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/dto/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" afterDir="false" />
     </list>
@@ -138,7 +137,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674908112205</updated>
-      <workItem from="1674908114477" duration="14375000" />
+      <workItem from="1674908114477" duration="17422000" />
     </task>
     <task id="LOCAL-00001" summary="3 lesson">
       <created>1674917161832</created>
@@ -168,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674983872922</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="6 lesson">
+      <created>1674995333504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674995333505</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

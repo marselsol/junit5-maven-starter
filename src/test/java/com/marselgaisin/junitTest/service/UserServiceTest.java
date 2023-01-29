@@ -2,10 +2,13 @@ package com.marselgaisin.junitTest.service;
 
 import com.marselgaisin.junit.dto.User;
 import com.marselgaisin.junit.service.UserService;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
 
+import java.util.Map;
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -15,6 +18,7 @@ public class UserServiceTest {
     private static final User IVAN = User.of(1, "Ivan", "123");
     private static final User PETR = User.of(2, "Petr", "111");
     private UserService userService;
+
     @BeforeAll
     void init() {
         System.out.println("Before all: " + this);
@@ -25,6 +29,7 @@ public class UserServiceTest {
         System.out.println("Before each " + this);
         userService = new UserService();
     }
+
     @Test
     void usersEmptyIfNoUserAdded() {
         System.out.println("Test 1: " + this);
@@ -38,8 +43,23 @@ public class UserServiceTest {
 
         Optional<User> maybeUser = userService.login(IVAN.getUsername(), IVAN.getPassword());
 
-        assertTrue(maybeUser.isPresent());
-        maybeUser.ifPresent(user -> assertEquals(IVAN, user));
+        assertThat(maybeUser).isPresent();
+        maybeUser.ifPresent(user -> assertThat(user).isEqualTo(IVAN));
+
+//        assertTrue(maybeUser.isPresent());
+//        maybeUser.ifPresent(user -> assertEquals(IVAN, user));
+    }
+
+    @Test
+    void usersConvertedToMapById() {
+        userService.add(IVAN, PETR);
+
+        Map<Integer, User> users = userService.getAllConvertedById();
+
+        assertAll(
+                () -> assertThat(users).containsKeys(IVAN.getId(), PETR.getId()),
+                () -> assertThat(users).containsValues(IVAN, PETR)
+        );
     }
 
     @Test
@@ -66,7 +86,8 @@ public class UserServiceTest {
         userService.add(IVAN);
         userService.add(PETR);
         var users = userService.getAll();
-        assertEquals(2, users.size());
+        assertThat(users).hasSize(2);
+//        assertEquals(2, users.size());
     }
 
     @AfterEach

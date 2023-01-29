@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="4 lesson">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/TestLauncher.java" afterDir="false" />
+    <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="6 lesson">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marselgaisin/junit/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_directory_selection": "D:/prog/project/junit5-maven-starter/src/main/java/com/marselgaisin/junitTest/service",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -57,7 +60,7 @@
       <command value="mvn -N io.takari:maven:0.7.7:wrapper -Dmaven=3.6.3" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestLauncher">
+  <component name="RunManager" selected="JUnit.UserServiceTest">
     <configuration name="TestLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.marselgaisin.junitTest.TestLauncher" />
       <module name="junit5-maven-starter" />
@@ -86,6 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceTest.loginSuccessIfUserExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-maven-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marselgaisin.junitTest.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marselgaisin.junitTest.service" />
+      <option name="MAIN_CLASS_NAME" value="com.marselgaisin.junitTest.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="loginSuccessIfUserExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceTest.usersEmptyIfNoUserAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-maven-starter" />
       <extension name="coverage">
@@ -104,8 +123,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestLauncher" />
         <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.loginSuccessIfUserExists" />
+        <item itemvalue="Application.TestLauncher" />
         <item itemvalue="JUnit.UserServiceTest.usersEmptyIfNoUserAdded" />
       </list>
     </recent_temporary>
@@ -118,7 +138,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674908112205</updated>
-      <workItem from="1674908114477" duration="11263000" />
+      <workItem from="1674908114477" duration="14375000" />
     </task>
     <task id="LOCAL-00001" summary="3 lesson">
       <created>1674917161832</created>
@@ -141,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674977999341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="5 lesson">
+      <created>1674983872922</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674983872922</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +188,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3 lesson" />
     <MESSAGE value="4 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="4 lesson" />
+    <MESSAGE value="5 lesson" />
+    <MESSAGE value="6 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 lesson" />
   </component>
 </project>

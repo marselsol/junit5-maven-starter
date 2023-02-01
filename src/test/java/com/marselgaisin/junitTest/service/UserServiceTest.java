@@ -11,7 +11,8 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@Tag("fast")
+@Tag("user")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserServiceTest {
 
@@ -38,6 +39,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @Tag("login")
     void loginSuccessIfUserExists() {
         userService.add(IVAN);
 
@@ -51,6 +53,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @Tag("login")
     void throwExceptionIfUsernameOrPasswordIsNull() {
         assertAll(
                 () -> assertThrows(IllegalArgumentException.class, () -> userService.login(null, "dummy")),
@@ -70,7 +73,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void logicFailPasswordIdNotCorrect() {
+    @Tag("login")
+    void loginFailPasswordIdNotCorrect() {
         userService.add(IVAN);
 
         var maybeUser = userService.login(IVAN.getUsername(), "dummy");
@@ -79,7 +83,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void logicFailIfUserDoesNotExist() {
+    @Tag("login")
+    void loginFailIfUserDoesNotExist() {
         userService.add(IVAN);
 
         var maybeUser = userService.login("dummy", IVAN.getPassword());

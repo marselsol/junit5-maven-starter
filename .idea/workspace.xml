@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="8 lesson">
+    <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="9 lesson">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/TestLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/TestLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +57,7 @@
       <command value="mvn -N io.takari:maven:0.7.7:wrapper -Dmaven=3.6.3" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestLauncher">
+  <component name="RunManager" selected="JUnit.UserServiceTest">
     <configuration name="TestLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.marselgaisin.junitTest.TestLauncher" />
       <module name="junit5-maven-starter" />
@@ -137,8 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestLauncher" />
         <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="Application.TestLauncher" />
         <item itemvalue="JUnit.UserServiceTest.throwExceptionIfUsernameOrPasswordIsNull" />
         <item itemvalue="JUnit.UserServiceTest.loginSuccessIfUserExists" />
         <item itemvalue="JUnit.UserServiceTest.usersEmptyIfNoUserAdded" />
@@ -155,7 +154,7 @@
       <updated>1674908112205</updated>
       <workItem from="1674908114477" duration="17735000" />
       <workItem from="1675061411386" duration="725000" />
-      <workItem from="1675255356553" duration="2075000" />
+      <workItem from="1675255356553" duration="3534000" />
     </task>
     <task id="LOCAL-00001" summary="3 lesson">
       <created>1674917161832</created>
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675256469540</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="9 lesson">
+      <created>1675258222995</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675258222995</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +236,8 @@
     <MESSAGE value="6 lesson" />
     <MESSAGE value="7 lesson" />
     <MESSAGE value="8 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="8 lesson" />
+    <MESSAGE value="9 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="9 lesson" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/junit5_maven_starter$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1675256422876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

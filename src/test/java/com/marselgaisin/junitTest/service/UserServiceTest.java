@@ -2,8 +2,10 @@ package com.marselgaisin.junitTest.service;
 
 import com.marselgaisin.junit.dto.User;
 import com.marselgaisin.junit.service.UserService;
+import com.marselgaisin.junitTest.paramresolver.UserServiceParamResolver;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.Map;
 import java.util.Optional;
@@ -15,11 +17,18 @@ import static org.junit.jupiter.api.Assertions.*;
 @Tag("user")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@ExtendWith(
+        {UserServiceParamResolver.class}
+)
 public class UserServiceTest {
 
     private static final User IVAN = User.of(1, "Ivan", "123");
     private static final User PETR = User.of(2, "Petr", "111");
     private UserService userService;
+
+    UserServiceTest(TestInfo testinfo) {
+        System.out.println();
+    }
 
     @BeforeAll
     void init() {
@@ -35,7 +44,7 @@ public class UserServiceTest {
     @Test
     @Order(1)
     @DisplayName("name of  method")
-    void usersEmptyIfNoUserAdded() {
+    void usersEmptyIfNoUserAdded(UserService userService) {
         System.out.println("Test 1: " + this);
         var users = userService.getAll();
         assertTrue(users.isEmpty(), () -> "users list should be empty");

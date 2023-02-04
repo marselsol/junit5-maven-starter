@@ -6,9 +6,12 @@ import com.marselgaisin.junitTest.paramresolver.UserServiceParamResolver;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.*;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -49,7 +52,6 @@ public class UserServiceTest {
         var users = userService.getAll();
         assertTrue(users.isEmpty(), () -> "users list should be empty");
     }
-
 
 
     @Test
@@ -124,6 +126,27 @@ public class UserServiceTest {
 
             assertTrue(maybeUser.isEmpty());
         }
+
+        @ParameterizedTest(name = "{arguments} test")
+//        @ArgumentsSource() //находит наши аргументы
+//        @NullSource
+//        @EmptySource
+//        @ValueSource(strings = {"Ivan", "Petr"})
+        @MethodSource("com.marselgaisin.junitTest.service.UserServiceTest#getArgumentsForLoginTest")
+//        @CsvFileSource(resources = "/login-test-data.csv", numLinesToSkip = 1, delimiter = ',') //Тестирование с данными из файла csv
+        void loginParametrizedTest(String username, String password, Optional<User> user) {
+            userService.add(IVAN, PETR);
+            var maybeUser = userService.login(username, password);
+            assertThat(maybeUser).isEqualTo(user);
+        }
     }
 
+    static Stream<Arguments> getArgumentsForLoginTest() {
+        return Stream.of(
+                Arguments.of("Ivan", "123", Optional.of(IVAN)),
+                Arguments.of("Petr", "111", Optional.of(PETR)),
+                Arguments.of("Petr", "dummy", Optional.empty()),
+                Arguments.of("dummy", "123", Optional.empty())
+        );
+    }
 }

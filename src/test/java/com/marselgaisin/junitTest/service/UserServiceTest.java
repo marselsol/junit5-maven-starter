@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.*;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -88,6 +89,7 @@ public class UserServiceTest {
 
     @Nested
     @Tag("login")
+    @Timeout(value = 200, unit = TimeUnit.MILLISECONDS) //Аннотация проверят время, чтобы не выходило за значение
     class loginTest {
         @Test
         void loginSuccessIfUserExists() {
@@ -109,6 +111,7 @@ public class UserServiceTest {
                     () -> assertThrows(IllegalArgumentException.class, () -> userService.login("dummy", null)));
         }
 
+        @Disabled("flaky, need to see") //Аннотация позволяет не запускать тест
         @Test
         void loginFailPasswordIdNotCorrect() {
             userService.add(IVAN);
@@ -119,7 +122,8 @@ public class UserServiceTest {
         }
 
         @Test
-        void loginFailIfUserDoesNotExist() {
+        @RepeatedTest(value = 5, name = RepeatedTest.LONG_DISPLAY_NAME) //Позволяет повторят тест несколько раз. Например использется для флаки тестов
+        void loginFailIfUserDoesNotExist(RepetitionInfo repetitionInfo) {
             userService.add(IVAN);
 
             var maybeUser = userService.login("dummy", IVAN.getPassword());

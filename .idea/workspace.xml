@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="11 lesson">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/login-test-data.csv" afterDir="false" />
+    <list default="true" id="a56b1f4b-212c-4489-9ad5-20900259488d" name="Changes" comment="12 lesson">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/marselgaisin/junitTest/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +61,23 @@
       <command value="mvn -N io.takari:maven:0.7.7:wrapper -Dmaven=3.6.3" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest$loginTest.loginParametrizedTest">
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="UserServiceTest$loginTest.loginFailIfUserDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5-maven-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marselgaisin.junitTest.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marselgaisin.junitTest.service.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.marselgaisin.junitTest.service.UserServiceTest$loginTest" />
+      <option name="METHOD_NAME" value="loginFailIfUserDoesNotExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceTest$loginTest.loginParametrizedTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-maven-starter" />
       <extension name="coverage">
@@ -112,23 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest$loginTest.loginSuccessIfUserExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5-maven-starter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.marselgaisin.junitTest.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.marselgaisin.junitTest.service.UserServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="com.marselgaisin.junitTest.service.UserServiceTest$loginTest" />
-      <option name="METHOD_NAME" value="loginSuccessIfUserExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.usersSizeIfUserAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5-maven-starter" />
       <extension name="coverage">
         <pattern>
@@ -138,19 +136,18 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.marselgaisin.junitTest.service" />
       <option name="MAIN_CLASS_NAME" value="com.marselgaisin.junitTest.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="usersSizeIfUserAdded" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest$loginTest.loginFailIfUserDoesNotExist" />
         <item itemvalue="JUnit.UserServiceTest$loginTest.loginParametrizedTest" />
         <item itemvalue="JUnit.UserServiceTest$loginTest.loginParametrizedTest (2)" />
         <item itemvalue="JUnit.UserServiceTest$loginTest.loginParametrizedTest (1)" />
-        <item itemvalue="JUnit.UserServiceTest$loginTest.loginSuccessIfUserExists" />
-        <item itemvalue="JUnit.UserServiceTest.usersSizeIfUserAdded" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +164,7 @@
       <workItem from="1675255356553" duration="3688000" />
       <workItem from="1675276945655" duration="72000" />
       <workItem from="1675449926737" duration="1781000" />
-      <workItem from="1675510496107" duration="3847000" />
+      <workItem from="1675510496107" duration="5293000" />
     </task>
     <task id="LOCAL-00001" summary="3 lesson">
       <created>1674917161832</created>
@@ -246,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675456795587</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="12 lesson">
+      <created>1675514978536</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675514978536</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +277,8 @@
     <MESSAGE value="9 lesson" />
     <MESSAGE value="10 lesson" />
     <MESSAGE value="11 lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="11 lesson" />
+    <MESSAGE value="12 lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="12 lesson" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
